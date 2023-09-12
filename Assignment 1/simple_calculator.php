@@ -35,52 +35,53 @@
                                     <option value="division">Division</option>
                                 </select>
                             </div><br><br>
-                            <button type="submit" class="d-flex justify-content-center">Calculate</button>
+                            <center>
+                                <button type="submit" class="d-flex justify-content-center">Calculate</button>
+                            </center>
 
                         </form>
                         
                     </div>
+
+                    <div class="result">
+                        <?php
+                            if($_SERVER['REQUEST_METHOD'] == "POST"){
+                                $num1 = $_POST["num1"];
+                                $num2 = $_POST["num2"];
+                                $operation = $_POST["operations"];
+
+                                switch ($operation) {
+                                    case 'add':
+                                        $result = $num1+ $num2;
+                                        echo "Result: $result";
+                                        break;
+
+                                    case 'sub':
+                                        $result = $num1 - $num2;
+                                        echo "Result: $result";
+                                        break;
+
+                                    case 'mul':
+                                        $result = $num1 * $num2;
+                                        echo "Result: $result";
+                                        break;
+                                    
+                                    case 'division':
+                                        $result = $num1 / $num2;
+                                        echo "Result: $result";
+                                        break;
+                                    
+                                    default:
+                                        echo "somthing went wrong";
+                                        break;
+                                }
+                            }
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="result">
-            <?php
-                if($_SERVER['REQUEST_METHOD'] == "POST"){
-                    $num1 = $_POST["num1"];
-                    $num2 = $_POST["num2"];
-                    $operation = $_POST["operations"];
-
-                    switch ($operation) {
-                        case 'add':
-                            $result = $num1+ $num2;
-                            echo "Result: $result";
-                            break;
-
-                        case 'sub':
-                            $result = $num1 - $num2;
-                            echo "Result: $result";
-                            break;
-
-                        case 'mul':
-                            $result = $num1 * $num2;
-                            echo "Result: $result";
-                            break;
-                        
-                        case 'division':
-                            $result = $num1 / $num2;
-                            echo "Result: $result";
-                            break;
-                        
-                        default:
-                            echo "somthing went wrong";
-                            break;
-                    }
-                }
-
-
-
-            ?>
-        </div>
+        
 
 
     </div>
