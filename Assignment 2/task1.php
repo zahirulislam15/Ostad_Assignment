@@ -1,30 +1,26 @@
 <?php
     function evenNumberUsingForLoop($x, $y){
-        for($i = $x;$i<=$y;$i++){
-            if($i%2 == 0){
-                echo $i . " ";
-            }
+        $i = ++$x;
+        for(;$i<=$y;$i+=2){            
+            echo $i . " ";            
         }
     }
 
     function evenNumberUsingWhileLoop($x, $y){
-        $i = $x;
-        while($i<=$y){
-            if($i%2 == 0){
-                echo $i . " ";
-            }
-        $i++;
+        $i = ++$x;
+        // $i=2;
+        while($i<=$y){            
+            echo $i . " ";            
+            $i+=2;
         }
     }
 
     function evenNumberUsingDoWhileLoop($x, $y){
-        $i=$x;
-        do {
-            
-            if($i%2 == 0){
-                echo $i . " ";
-            }
-            $i++;
+        $i=++$x;
+        // $i=2;
+        do {            
+            echo $i . " ";            
+            $i+=2;
         } while ($i<=$y);
             
         
