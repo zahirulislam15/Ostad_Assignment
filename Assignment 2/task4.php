@@ -1,5 +1,7 @@
 <?php
 
+echo "Print first 15 number of fibinacci series using Function. And send 15 as an argument. \n";
+
 function fibonacciSeries($n){
     $a = 0;
     $b = 1;

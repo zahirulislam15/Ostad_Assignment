@@ -1,4 +1,6 @@
 <?php
+
+    echo "Print first 10 number of fibinacci series. If number is greater than 100 break the loop. \n";
     $a = 0;
     $b = 1;
     echo "$a $b ";
