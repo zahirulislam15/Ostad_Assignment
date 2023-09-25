@@ -1,6 +1,4 @@
 <?php
-
-
     function studentAverageMark($studentGrades){
         $AverageNumbers = [];
         foreach($studentGrades as $item){
@@ -12,8 +10,11 @@
             $AverageNumbers[] = $avg;
         }
 
-        foreach($AverageNumbers as $item){
-            echo $item ." ";
+        $key = array("student1","student2","student3");
+        $AverageNumber = array_combine($key, $AverageNumbers);
+        echo "Students Agerage Numbers are: " . PHP_EOL;
+        foreach($AverageNumber as $abc=> $item){
+            echo $abc." => ".$item .PHP_EOL;
         }
     }
 
@@ -36,8 +37,4 @@
         )                
     );
     studentAverageMark($studentGrades);
-
-
-
-
 ?>
