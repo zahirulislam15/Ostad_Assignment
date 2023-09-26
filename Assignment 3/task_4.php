@@ -16,6 +16,22 @@
         foreach($AverageNumber as $abc=> $item){
             echo $abc." => ".$item .PHP_EOL;
         }
+
+        foreach($AverageNumber as $abc=> $item){
+            if($item >= 80)
+                echo $abc." Gots A+" .PHP_EOL;
+            elseif($item >= 70)
+                echo $abc." Gots A" .PHP_EOL;
+            elseif($item >= 60)
+                echo $abc." Gots A-" .PHP_EOL;
+            elseif($item >= 50)
+                echo $abc." Gots B" .PHP_EOL;
+            elseif($item >= 40)
+                echo $abc." Gots C" .PHP_EOL;
+            else
+                echo $abc." Gots F" .PHP_EOL;
+        }
+
     }
 
 
