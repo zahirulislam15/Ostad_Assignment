@@ -10,26 +10,27 @@ class Product {
         $this->price = $price;
     }
 
-    public function getFormattedPrice($price){
-        return strval(number_format($price,2));
+    
+
+    public function getFormattedPrice($p){
+        $price1 = number_format($p,2);
+        // echo ($price1);
+        return $price1;
     }
 
     public function showDetails(){
         echo "ID: ". $this->id . "\n";
         echo "Name: ". $this->name . PHP_EOL;
         $prices = $this->getFormattedPrice($this->price);
-        echo "Price: ". $this->price;
+        echo "Price: ". $prices;
 
-        // return gettype($this->name);
     }
 }
 
 
 // Test the Product class
-$product = new Product(1, 'T-shirt', 19.99);
+$product = new Product(1, 'T-shirt', 19.999999);
 $product->showDetails();
 
-// $abc = $product->showDetails();
-// echo $abc;
 
 ?>
