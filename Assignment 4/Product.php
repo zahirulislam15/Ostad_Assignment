@@ -17,10 +17,11 @@ class Product {
     }
 
     public function showDetails(){
-        echo "ID: ". $this->id . "\n";
-        echo "Name: ". $this->name . PHP_EOL;
+        echo "Product Details:" . PHP_EOL;
+        echo "-ID: ". $this->id . "\n";
+        echo "-Name: ". $this->name . PHP_EOL;
         $prices = $this->getFormattedPrice($this->price);
-        printf("Price: $%.2f", $prices);
+        printf("-Price: $%.2f", $prices);
 
     }
 }
