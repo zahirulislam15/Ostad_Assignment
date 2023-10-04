@@ -9,12 +9,10 @@ class Product {
         $this->id = $id;
         $this->name = $name;
         $this->price = $price;
-    }
-
-    
+    }    
 
     public function getFormattedPrice($p){
-        $price1 = number_format($p,2);
+        $price1 = number_format($p,2, '.', ',');
         return $price1; 
     }
 
@@ -22,7 +20,7 @@ class Product {
         echo "ID: ". $this->id . "\n";
         echo "Name: ". $this->name . PHP_EOL;
         $prices = $this->getFormattedPrice($this->price);
-        printf("Price: %.2f", $prices);
+        printf("Price: $%.2f", $prices);
 
     }
 }
@@ -31,6 +29,5 @@ class Product {
 // Test the Product class
 $product = new Product(1, 'T-shirt', 19.99);
 $product->showDetails();
-
 
 ?>
