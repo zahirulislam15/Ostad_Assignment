@@ -1,3 +1,5 @@
+Task 1:
+
 
 SELECT c.customer_id, c.name, c.email, c.location, COUNT(Orders.order_id) AS total_orders
 FROM Customers c
